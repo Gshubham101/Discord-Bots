@@ -9,7 +9,7 @@ async def online():
 async def on_message(message):
   if message.author == client.user:
     return
-  list = ("just joined","joined your party.","joined. You must construct additional pylons.","Ermagherd.","Welcome, User.","A wild","Swoooosh.","joined")
+  list = ("just joined","joined your party.","joined. You must construct additional pylons.","Ermagherd.","Welcome, User.","A wild","Swoooosh.","joined","Brace yourselves","just arrived","just slid into the server.","has spawned in the server.","showed up!","In the server!","Kangaroo!!","Hold my beer.","Challenger approaching","It's a bird! It's a plane! Nevermind, it's just","Praise the sun!","Never gonna give","Cheers, love!","We've been expecting you","It's dangerous to go alone","as the prophecy foretold.","Party's over.","Ready player","is here to kick butt and chew bubblegum","you're looking for?","Yay, you made it")
   if message.content.endswith(list) :
     await message.channel.send("Welcome to the chat!"+"Introduce yourself at #intro,"+"contact"+"<@294657695334662145>"+"if you face any trouble with the server :)")
 keep_alive() 
