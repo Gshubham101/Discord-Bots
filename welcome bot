@@ -1,0 +1,16 @@
+import os
+import discord 
+from keep_alive import keep_alive
+client = discord.Client()
+@client.event
+async def online():
+  print('logged in as {0.user}'.format(client))
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+  list = ("just joined","joined your party.","joined. You must construct additional pylons.","Ermagherd.","Welcome, User.","A wild","Swoooosh.","joined")
+  if message.content.endswith(list) :
+    await message.channel.send("Welcome to the chat!"+"Introduce yourself at #intro,"+"contact"+"<@294657695334662145>"+"if you face any trouble with the server :)")
+keep_alive() 
+client.run(os.getenv('TOKEN'))
